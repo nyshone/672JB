@@ -11,37 +11,27 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <body style="background-color:#000A9E;color:white;">
 <h1 id=msgs style='font-size:25px;text-align:center;'>6.72 Exploit Menu</h1>
 <hr><br><h1 style='font-size:18px;text-align:center;'>
-<button onclick="load_exploit(); return false" style="width:135px;height:35px;">Load Exploit</button>
-<br>------------------------------------------------------------------------<br>
-<button onclick="load_mira(); return false" style="width:135px;height:35px;">Mira</button> || 
-<button onclick="load_HEN(); return false" style="width:135px;height:35px;">HEN</button> ||
-<button onclick="load_mira_unofficial(); return false" style="width:135px;height:35px;">Mira (Unofficial)</button>
+<button onclick="load_exploit_mira(); return false" style="width:135px;height:35px;">Mira</button> || 
+<button onclick="load_exploit_HEN(); return false" style="width:135px;height:35px;">HEN</button> ||
+<button onclick="load_exploit_miraUnoff(); return false" style="width:135px;height:35px;">Mira (Unofficial)</button>
 <p style="text-align: center;position:fixed;bottom:0;width:100%">Made by Nyshone</p>
 <script>
-function load_exploit(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit ...</h1>";
+function load_exploit_HEN(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + HEN ...</h1>";
+LoadedMSG="Exploit + HEN Loaded ✔";ExploitMira="HEN";MiraSRC="pl_HEN.js";
 setTimeout(jailbreak,500);
 }
 
-function load_HEN(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading HEN ...</h1>";
-LoadedMSG="HEN Loaded ✔";
-var script = document.createElement('script');script.src = "pl_HEN.js";document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+function load_exploit_mira(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + Mira ...</h1>";
+LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="pl_mira.js";
+setTimeout(jailbreak,500);
 }
 
-function load_mira(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Mira ...</h1>";
-LoadedMSG="Mira Loaded ✔";
-var script = document.createElement('script');script.src = "pl_mira.js";document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
-}
-
-function load_mira_unofficial(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Mira ...</h1>";
-LoadedMSG="Mira Loaded ✔";
-var script = document.createElement('script');script.src = "pl_mira_unofficial.js";document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
+function load_exploit_miraUnoff(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + Mira (Unofficial) ...</h1>";
+LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="pl_mira_unofficial.js";
+setTimeout(jailbreak,500);
 }
 
 
